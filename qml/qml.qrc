@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>ConnectBar.qml</file>
+        <file>TreeView.qml</file>
+        <file>ConsoleLog.qml</file>
+    </qresource>
+</RCC>
