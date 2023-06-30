@@ -3,7 +3,8 @@ import Qt.labs.platform 1.1
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Controls.Styles 1.4
-
+import OpcUaModel 1.0
+import ConnectServer 1.0
 GridLayout
 {
     id: connectionGridLayout
@@ -93,6 +94,7 @@ GridLayout
             border.width: 1
             radius: 2
         }
+        onClicked: connectServer.findServers()
     }
 
     Label {
@@ -132,7 +134,7 @@ GridLayout
         id:control_select_server
         text: "Get EndPoints"
         Layout.fillWidth: true
-        enabled: false
+        enabled: true
 
         contentItem: Text {
             text: control_select_server.text
@@ -152,6 +154,7 @@ GridLayout
             border.width: 1
             radius: 2
         }
+        onClicked: connectServer.getEndpoint()
     }
 
     Label {
@@ -191,7 +194,7 @@ GridLayout
         id:control_select_endpoint
         text: "Connect"
         Layout.fillWidth: true
-        enabled: false
+        enabled: true
         contentItem: Text {
             text: control_select_endpoint.text
             font: control_select_endpoint.font
@@ -210,6 +213,7 @@ GridLayout
             border.width: 1
             radius: 2
         }
+        onClicked: connectServer.connectToServer()
     }
 
 }

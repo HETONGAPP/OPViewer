@@ -4,5 +4,6 @@
         <file>ConnectBar.qml</file>
         <file>TreeView.qml</file>
         <file>ConsoleLog.qml</file>
+        <file>Seperator.qml</file>
     </qresource>
 </RCC>

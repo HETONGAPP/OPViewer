@@ -74,14 +74,10 @@ ApplicationWindow {
             }
         }
     }
-
-    Rectangle {
+    Seperator
+    {
         anchors.top: menuBar.bottom
-        width: parent.width
-        height: 1
-        color: "grey" // Color of the separator line
     }
-
     ColumnLayout
     {
         anchors.top: menuBar.bottom
@@ -90,27 +86,19 @@ ApplicationWindow {
         anchors.leftMargin: 6
         anchors.right: parent.right
         anchors.rightMargin: 6
-        height: window.height - menuBar.height
+        height: window.height - menuBar.height-6
         spacing: 6
         ConnectBar
         {
            id: _connectBar
         }
-        Rectangle {
-            Layout.fillWidth: true
-            height: 1
-            color: "grey" // Color of the separator line
-        }
+        Seperator{}
         TreeView
         {
             Layout.fillWidth: true
             Layout.fillHeight: true
         }
-        Rectangle {
-            Layout.fillWidth: true
-            height: 1
-            color: "grey" // Color of the separator line
-        }
+        Seperator{}
         Label
         {
             text: "Log"
@@ -118,22 +106,14 @@ ApplicationWindow {
             font.family: "Ubuntu"
             font.pixelSize: 12
         }
-        Rectangle {
-            Layout.fillWidth: true
-            height: 1
-            color: "grey" // Color of the separator line
-        }
+        Seperator{}
 
         ConsoleLog{
             Layout.fillWidth: true
             Layout.fillHeight: true
         }
-
-
+        Seperator{}
     }
-
-
-
 }
 
 
